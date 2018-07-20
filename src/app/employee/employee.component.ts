@@ -25,8 +25,7 @@ export class EmployeeComponent {
 
   showTableData(): void{
     this.isTableDisplayed = !this.isTableDisplayed;
-    this.buttonText = (this.isTableDisplayed == true) ? "Hide Details" : "Show Details";
-    // return buttonText
+    this.buttonText = (this.isTableDisplayed == true) ? "Hide Details" : "Show Details";    
   }
 
 }

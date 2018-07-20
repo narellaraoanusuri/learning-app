@@ -1,9 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div [class]="topicClass">
   <h1>
     Welcome to {{ title }}!
   </h1>
 </div>
-<app-employee></app-employee>
+
+<section [class]="sectionClass">
+  <div [class]="topicClass">Example For Components, Nested Components, Styling Components, Interpolation, Property Binding, Attribute Binding, Class Binding, Style Binding, Events Binding</div>
+  <app-employee [class]="blockClass"></app-employee>
+</section>
+
+<section [class]="sectionClass">
+  <div [class]="topicClass">Example For Two Way Binding</div>
+  <app-two-way-binding [class]="blockClass"></app-two-way-binding>
+</section>
+
+<section [class]="sectionClass">
+  <div [class]="topicClass">Example For Reading Data, Pipes</div>
+  <app-student-info [class]="blockClass"></app-student-info>
+</section>
+
+
+
 
 

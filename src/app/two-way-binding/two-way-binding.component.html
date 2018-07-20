@@ -1,0 +1,5 @@
+<input type="text" [value]="inputValue" (input)="inputValue = $event.target.value" name="inputBox_1"/><!-- Example For Two Way Binding -->
+<br/><br/>
+<div>{{inputValue}}</div>
+<br/>
+<input type="text" [(ngModel)]="inputValue" name="inputBox_2"/><!-- Example For Two Way Binding -->

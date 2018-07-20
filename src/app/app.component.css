@@ -1,0 +1,19 @@
+
+
+.topicSection{    
+    padding: 10px;
+    border: 1px solid;
+    margin: 10px;
+}
+.topicTitle{
+    font-family: lucida calligraphy;
+    background-color: #6637df;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.blockSection{
+    display: block;
+    text-align: center
+}
