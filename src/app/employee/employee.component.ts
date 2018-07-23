@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-employee',
+  // selector: 'app-employee',
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent {
+  topicClass:string = 'topicTitle';
+  sectionClass:string = 'topicSection';
+  blockClass:string = 'blockSection';
+
   colSpanValue:number = 2;
   nameStyle:string = "nameClass";
   hasAnotherClass:boolean = true;

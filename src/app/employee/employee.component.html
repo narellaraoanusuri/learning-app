@@ -1,24 +1,29 @@
-<button (click)="showTableData()"><!-- Example For Event Binding -->
-  {{buttonText}}
-</button>
-<table *ngIf="isTableDisplayed"><!-- Example For Event Binding -->
-  <tr>
-    <th [attr.colspan]="colSpanValue">Employee Details</th><!-- Example For CSS Attribute Binding -->
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td [class]="nameStyle" [class.anotherClass]="hasAnotherClass">{{empName()}}</td><!-- Example For Class Binding And Multiple Class Binding-->
-  </tr>
-  <tr>
-    <td>Employee Code</td>
-    <td [innerHTML]="empCode"></td><!-- Example For DOM Property Binding -->
-  </tr>
-  <tr>
-    <td>Employee Age</td>
-    <td [style.color]="ageColor">{{5*5}}</td><!-- Example For Styling Binding -->
-  </tr>
-  <tr>
-    <td>Company</td>
-    <td>{{company}}</td><!-- Example For Interpolation -->
-  </tr>
-</table>
+<section [class]="sectionClass">
+  <div [class]="topicClass">Example For Components, Nested Components, Styling Components, Interpolation, Property Binding, Attribute Binding, Class Binding, Style Binding, Events Binding</div>
+  <div [class]="blockClass">
+    <button (click)="showTableData()"><!-- Example For Event Binding -->
+      {{buttonText}}
+    </button>
+    <table *ngIf="isTableDisplayed"><!-- Example For Event Binding -->
+      <tr>
+        <th [attr.colspan]="colSpanValue">Employee Details</th><!-- Example For CSS Attribute Binding -->
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td [class]="nameStyle" [class.anotherClass]="hasAnotherClass">{{empName()}}</td><!-- Example For Class Binding And Multiple Class Binding-->
+      </tr>
+      <tr>
+        <td>Employee Code</td>
+        <td [innerHTML]="empCode"></td><!-- Example For DOM Property Binding -->
+      </tr>
+      <tr>
+        <td>Employee Age</td>
+        <td [style.color]="ageColor">{{5*5}}</td><!-- Example For Styling Binding -->
+      </tr>
+      <tr>
+        <td>Company</td>
+        <td>{{company}}</td><!-- Example For Interpolation -->
+      </tr>
+    </table>
+  </div>
+</section>

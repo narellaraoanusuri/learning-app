@@ -1,19 +1,24 @@
-<table>
-  <tr>
-    <th>Student ID</th>
-    <th>Student Name</th>
-    <th>Salary</th>    
-    <th>Salary Ater Deduction</th>    
-    <th>Date Of Birth</th>
-  </tr>
-  <tr *ngFor="let studentData of studentsData"><!-- Example For Reading Data -->
-    <td>{{studentData.id}}</td>
-    <td>{{studentData.name | uppercase}}</td><!-- Example For Pipes -->
-    <td>{{studentData.salary | currency:'INR':"symbol"}}</td><!-- Example For Pipes -->
-    <td>{{studentData.salary | deduct:deductPercent | currency:'INR':symbol}}</td><!-- Example For Custom Pipes -->
-    <td>{{studentData.dob | date:"fullDate"}}</td><!-- Example For Pipes -->
-  </tr>
-  <tr *ngIf="studentsData.length==0"><!-- Displayed Only When The studentsData Array Is Empty -->
-    <td [attr.colspan]="colValue" [innerHTML]="textForNoData"></td>
-  </tr>
-</table>
+<section [class]="sectionClass">
+  <div [class]="topicClass">Example For Reading Data, Pipes, Custom Pipes</div>
+  <div [class]="blockClass">
+    <table>
+      <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Salary</th>    
+        <th>Salary Ater Deduction</th>    
+        <th>Date Of Birth</th>
+      </tr>
+      <tr *ngFor="let studentData of studentsData"><!-- Example For Reading Data -->
+        <td>{{studentData.id}}</td>
+        <td>{{studentData.name | uppercase}}</td><!-- Example For Pipes -->
+        <td>{{studentData.salary | currency:'INR':"symbol"}}</td><!-- Example For Pipes -->
+        <td>{{studentData.salary | deduct:deductPercent | currency:'INR':symbol}}</td><!-- Example For Custom Pipes -->
+        <td>{{studentData.dob | date:"fullDate"}}</td><!-- Example For Pipes -->
+      </tr>
+      <tr *ngIf="studentsData.length==0"><!-- Displayed Only When The studentsData Array Is Empty -->
+        <td [attr.colspan]="colValue" [innerHTML]="textForNoData"></td>
+      </tr>
+    </table>
+  </div>
+  </section>
