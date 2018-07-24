@@ -6,12 +6,14 @@
 </div>
 
 <section [class]="sectionClass">
-  <div [class]="topicClass">Example For Routing</div>
+  <div [class]="topicClass">Example For Parent Level Routing</div>
   <div [class]="blockClass">
     <a routerLink="homeCmpnt">Home Comp</a>
     <a routerLink="empCmpnt">Employee Comp</a>
     <a routerLink="TwoWayBndgCmpnt">Two Way Binding Comp</a>
     <a routerLink="StdntInfCmpnt">Student Info Comp</a>
+    <a routerLink="serviceCmpnt">Service Comp</a>
+    <!-- <a routerLink="notLinkedPage">Social Media</a> -->
     <router-outlet></router-outlet>
   </div>
 </section>

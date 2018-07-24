@@ -10,4 +10,9 @@ export class HomeComponent {
   topicClass:string = 'topicTitle';
   sectionClass:string = 'topicSection';
   blockClass:string = 'blockSection';
+
+  constructor(private gotoEmp:Router){}
+  gotoEmployee():void{
+    this.gotoEmp.navigate(['/empCmpnt'])
+  }
 }

@@ -10,37 +10,19 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { StudentInfoComponent } from './student-info/student-info.component';
 import { StudentSalaryDeductPipe } from './student-info/student-salary-deduct.pipe';
 import { PnfComponent } from './misc/pnf.component';
+import { CustomColorDirective } from './custom-directives/custom-color.directive';
+import { ServDemoComponent } from './service-interface-demo/serv-demo.component';
+import { ServSalaryDeductPipe } from './service-interface-demo/serv-salary-deduct.pipe';
 
 const appRoutes: Routes = [
-  {
-    path:'homeCmpnt',
-    component:HomeComponent
-  },
-  {
-    path:'empCmpnt',
-    component:EmployeeComponent
-  },
-  {
-    path:'TwoWayBndgCmpnt',
-    component:TwoWayBindingComponent
-  },
-  {
-    path:'StdntInfCmpnt',
-    component:StudentInfoComponent
-  },
-  {
-    path:'StdntInfCmpnt/:id',
-    component:StudentInfoComponent
-  },
-  {
-    path:'',
-    redirectTo:'/homeCmpnt',
-    pathMatch:'full'
-  },
-  {
-    path:'**',
-    component:PnfComponent
-  }
+  { path:'homeCmpnt', component:HomeComponent },
+  { path:'empCmpnt', component:EmployeeComponent },
+  { path:'TwoWayBndgCmpnt', component:TwoWayBindingComponent },
+  { path:'StdntInfCmpnt', component:StudentInfoComponent },
+  { path:'serviceCmpnt', component:ServDemoComponent },
+  // { path:'notLinkedPage', component:ServDemoComponent },
+  { path:'', redirectTo:'/homeCmpnt', pathMatch:'full' },
+  { path:'**', component:PnfComponent }
 ];
 
 @NgModule({
@@ -52,6 +34,9 @@ const appRoutes: Routes = [
     StudentInfoComponent,
     StudentSalaryDeductPipe,
     PnfComponent,
+    CustomColorDirective,
+    ServDemoComponent,
+    ServSalaryDeductPipe
   ],
   imports: [
     BrowserModule,
