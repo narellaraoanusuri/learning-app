@@ -10,4 +10,12 @@ export class TwoWayBindingComponent{
   sectionClass:string = 'topicSection';
   blockClass:string = 'blockSection';
   inputValue:string = "Anusuri";
+  inputChar:string = "";
+  inputNextChar:string = "";
+
+  eventHandler(keyCode) {
+    console.log(keyCode, String.fromCharCode(keyCode+1));
+    //  this.inputChar = String.fromCharCode(keyCode+1));
+  
+  }
 }
